@@ -1,5 +1,5 @@
 <template>
-    <select>
+    <select class="color-input">
     <option v-for="(item, i) in colors" v-bind:key="i">{{item.color}}</option>
     </select>
 </template>
@@ -48,5 +48,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .color-input {
+        padding: 4px 2px;
+    }
 </style>

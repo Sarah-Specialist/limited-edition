@@ -1,5 +1,5 @@
 <template>
-    <select>
+    <select class="size-input">
     <option v-for="(item, i) in sizes" v-bind:key="i">{{item.size.toFixed(1)}}</option>
     </select>
 </template>
@@ -39,5 +39,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+    .size-input {
+        padding: 4px 2px;
+    }
 </style>
