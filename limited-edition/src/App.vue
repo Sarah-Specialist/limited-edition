@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<div id="main-app">
+  <h1>{{title}}</h1>
+  <Image /><br />
+  <Size /><br />
+  <Color />
+</div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Image from './components/Image.vue'
+import Size from './components/Size.vue'
+import Color from './components/Color.vue'
 
 export default {
-  name: 'App',
+  name: 'MainApp',
+  data: function() {
+    return {
+      title: "Limited Edition"
+    }
+  },
   components: {
-    HelloWorld
+    Image,
+    Size,
+    Color
   }
 }
 </script>
 
 <style>
-#app {
+* {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: white;
+  background-color: black;
   margin-top: 60px;
 }
 </style>
