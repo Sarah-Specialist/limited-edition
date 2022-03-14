@@ -10,6 +10,7 @@
 <tbody>
 <tr>
 <td><img src="../assets/black.jpg" alt="black" class="image" /></td>
+<td>Size: {{size}}</td>
 <td>${{product.price}}</td>
 </tr>
 </tbody>
