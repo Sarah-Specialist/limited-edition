@@ -12,6 +12,11 @@ export default {
   name: 'MainApp',
   components: {
     ProductsPage
+  },
+  data() {
+    return {
+      
+    }
   }
 }
 </script>
@@ -22,5 +27,11 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+html, body {
+  background-image: url("https://i.pinimg.com/736x/50/69/61/5069613b363dc9f5c0bc4c9824ab26b7--background-hd-wallpaper-wallpaper-pc.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 </style>

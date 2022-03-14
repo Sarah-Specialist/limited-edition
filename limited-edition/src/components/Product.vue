@@ -30,6 +30,11 @@ export default {
       products
     }
   },
+  methods: {
+    match() {
+      
+    }
+  },
   components: {
     Size,
     Color
@@ -38,12 +43,6 @@ export default {
 </script>
 
 <style>
-.cart {
-  position: absolute;
-  top: 2%;
-  right: 2%;
-}
-
 .image {
   height: 300px;
   width: 500px;

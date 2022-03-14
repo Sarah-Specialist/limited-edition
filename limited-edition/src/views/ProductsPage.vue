@@ -7,17 +7,9 @@
 
 <script>
 import Product from '../components/Product.vue'
-import {products} from '../fakedata';
 
 export default {
   name: 'ProductsPage',
-  data: function() {
-    return {
-      title: "Limited Edition",
-      price: "$199.99",
-      products
-    }
-  },
   components: {
     Product
   }

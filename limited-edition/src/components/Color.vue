@@ -1,12 +1,18 @@
 <template>
     <select class="color-input">
-    <option v-for="(item, i) in colors" v-bind:key="i">{{item.color}}</option>
+    <option v-for="(item, i) in colors" 
+            v-bind:key="i"
+            value="color"
+    >
+    {{item.color}}
+    </option>
     </select>
 </template>
 
 <script>
 export default {
   name: 'ColorInput',
+  props: ['color'],
   data: function(){
     return {
       colors: [
