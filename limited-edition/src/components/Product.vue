@@ -1,17 +1,12 @@
 <template>
-  <router-link v-bind:to="/cart/">
-    <img src="../assets/cart.png" alt="cart" height="40" width="40" class="cart" />
-  </router-link>
   <div id="page-wrap">
-  <h1>{{title}}</h1>
-  <h2>{{price}}</h2>
   <div v-for="product in products"
         v-bind:key="product.id"
-        class="item">
+  >
     <img v-bind:src="product.imageUrl" class="image" />
   </div>
   <Size />
-  <Color />
+  <Color @change-color="$emit('change-color')" />
   <router-view/>
 </div>
 </template>
@@ -25,20 +20,14 @@ export default {
   name: 'ProductDetails',
   data: function() {
     return {
-      title: "Limited Edition",
-      price: "$199.99",
       products
-    }
-  },
-  methods: {
-    match() {
-      
     }
   },
   components: {
     Size,
     Color
-  }
+  },
+  emits: ['change-color']
 }
 </script>
 

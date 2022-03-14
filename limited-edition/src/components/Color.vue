@@ -1,5 +1,6 @@
 <template>
-    <select class="color-input">
+  <label>Color:</label>
+    <select class="color-input" :v-on="onChange()">
     <option v-for="(item, i) in colors" 
             v-bind:key="i"
             value="color"
@@ -48,7 +49,13 @@ export default {
         }
       ]
     }
-  }
+  },
+  methods: {
+    onChange(color) {
+      this.$emit('change-color', color)
+    }
+  },
+  emits: ['change-color']
 }
 </script>
 

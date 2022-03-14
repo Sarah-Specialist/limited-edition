@@ -1,4 +1,5 @@
 <template>
+  <label>Color:</label>
     <select class="size-input">
     <option v-for="(item, i) in sizes" v-bind:key="i">{{item.size.toFixed(1)}}</option>
     </select>
