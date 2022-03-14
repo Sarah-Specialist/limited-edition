@@ -15,4 +15,8 @@
     width: 400px;
     height: 350px;
 }
+
+img:hover {
+    cursor: pointer;
+}
 </style>

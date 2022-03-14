@@ -1,8 +1,14 @@
 <template>
 <div class="size">
   <label>Size:</label>
-    <select class="size-input">
-    <option v-for="(item, i) in sizes" v-bind:key="i">{{item.size.toFixed(1)}}</option>
+    <select class="size-input"  v-model="size">
+    <option value="6.0">6.0</option>
+    <option value="7.0">7.0</option>
+    <option value="7.5">7.5</option>
+    <option value="8.0">8.0</option>
+    <option value="8.5">8.5</option>
+    <option value="9.0">9.0</option>
+    <option value="10">10</option>
     </select>
 </div>
 </template>
@@ -12,29 +18,7 @@ export default {
   name: 'SizeInput',
   data: function(){
     return {
-      sizes: [
-        {
-        size: 6.0
-        },
-        {
-        size: 7.0
-        },
-        {
-        size: 7.5
-        },
-        {
-        size: 8.0
-        },
-        {
-        size: 8.5
-        },
-        {
-        size: 9.0
-        },
-        {
-        size: 10.0
-        }
-      ]
+      size: ''
     }
   }
 }
@@ -50,5 +34,9 @@ export default {
   .size-input {
     padding: 4px 2px;
     margin: 0 10px;
+  }
+
+  .size-input:hover {
+    cursor: pointer;
   }
 </style>

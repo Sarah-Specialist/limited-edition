@@ -7,7 +7,7 @@
   <h2>{{description}}</h2>
   <h2>{{price}}</h2>
   <Image />
-  <form v-on:onSubmit="handleSubmit">
+  <form v-on:submit="submit">
    <Size /><button class="button">Add to cart</button>
   </form>
 </div>
@@ -29,6 +29,12 @@ export default {
   components: {
     Image,
     Size
+  },
+  methods: {
+    submit(e) {
+      e.preventDefault()
+      console.log(this.size);
+    }
   }
 }
 </script>
@@ -50,9 +56,9 @@ export default {
 .button {
     position: relative;
     left: 5%;
-    bottom: 23px;
+    bottom: 26px;
     background-color: aquamarine;
-    padding: 3px 5px;
+    padding: 5px 8px;
     border: 1px solid grey;
     border-radius: 3px;
 }
