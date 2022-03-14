@@ -1,7 +1,6 @@
 <template>
 <div id="main-app">
-  <ProductsPage @change-color="change-color" />
-  <router-view/>
+  <ProductsPage />
 </div>
 </template>
 
@@ -12,14 +11,6 @@ export default {
   name: 'MainApp',
   components: {
     ProductsPage
-  },
-  data() {
-    return {
-      
-    }
-  },
-  methods: {
-    
   }
 }
 </script>
@@ -34,7 +25,8 @@ export default {
 
 body {
   background-image: url("https://i.pinimg.com/736x/50/69/61/5069613b363dc9f5c0bc4c9824ab26b7--background-hd-wallpaper-wallpaper-pc.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  
 }
 </style>

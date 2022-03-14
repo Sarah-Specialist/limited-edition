@@ -1,18 +1,22 @@
 <template>
-<div id="products-page">
+<div class="product-page">
   <router-link v-bind:to="/cart/">
-    <img src="../assets/cart.png" alt="cart" height="40" width="40" class="cart" />
+    <img src="../assets/cart.png" alt="cart" height="30" width="30" class="cart" />
   </router-link>
   <h1>{{title}}</h1>
   <h2>{{description}}</h2>
   <h2>{{price}}</h2>
-  <Product @change-color="change-color" />
-  <router-view/>
+  <Image />
+  <span>
+   <Size /><Button />
+  </span>
 </div>
 </template>
 
 <script>
-import Product from '../components/Product.vue'
+import Image from '../components/Image.vue'
+import Size from '../components/Size.vue'
+import Button from '../components/Button.vue'
 
 export default {
   name: 'ProductsPage',
@@ -24,7 +28,9 @@ export default {
     }
   },
   components: {
-    Product
+    Image,
+    Size,
+    Button
   }
 }
 </script>
@@ -42,5 +48,4 @@ export default {
   top: 2%;
   right: 2%;
 }
-
 </style>
