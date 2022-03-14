@@ -3,8 +3,8 @@
   <router-link :to="{name: 'Cart'}">
     <img src="../assets/cart.png" alt="cart" height="30" width="30" class="cart" />
   </router-link>
-  <h1>{{title}}</h1>
-  <h2>{{description}}</h2>
+  <h1 class="title">{{title}}</h1>
+  <h2 class="description">{{description}}</h2>
   <h2>{{price}}</h2>
   <Image />
   <form v-on:submit="submit">
@@ -22,7 +22,7 @@ export default {
    data: function() {
     return {
       title: "Hako Soar (H)",
-      description: "Limited Edition! Only 100 pairs worldwide!",
+      description: "LIMITED EDITION",
       price: "$199.99",
     }
   },
@@ -45,6 +45,17 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+}
+
+.title {
+  font-family: 'Bookman Old Style', serif;
+  font-size: 50px;
+  margin-top: 2%;
+}
+
+.description {
+  margin-top: -40px;
+  font-size: 16px;
 }
 
 .cart {
