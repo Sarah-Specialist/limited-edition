@@ -15,9 +15,10 @@ const routes = [
   },
   {
     path: '/',
-    redirect: '/products'
+    redirect: '/products',
   },
 ]
+
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

@@ -1,17 +1,13 @@
 <template>
 <div id="main-app">
-  <ProductsPage />
 </div>
+<router-view />
 </template>
 
 <script>
-import ProductsPage from './views/ProductsPage.vue'
 
 export default {
-  name: 'MainApp',
-  components: {
-    ProductsPage
-  }
+  name: 'MainApp'
 }
 </script>
 
@@ -21,6 +17,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  overflow-y: hidden;
 }
 
 body {

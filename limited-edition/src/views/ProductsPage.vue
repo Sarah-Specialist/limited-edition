@@ -1,22 +1,21 @@
 <template>
-<div class="product-page">
-  <router-link v-bind:to="/cart/">
+<div class="page-wrap">
+  <router-link :to="{name: 'Cart'}">
     <img src="../assets/cart.png" alt="cart" height="30" width="30" class="cart" />
   </router-link>
   <h1>{{title}}</h1>
   <h2>{{description}}</h2>
   <h2>{{price}}</h2>
   <Image />
-  <span>
-   <Size /><Button />
-  </span>
+  <form v-on:onSubmit="handleSubmit">
+   <Size /><button class="button">Add to cart</button>
+  </form>
 </div>
 </template>
 
 <script>
 import Image from '../components/Image.vue'
 import Size from '../components/Size.vue'
-import Button from '../components/Button.vue'
 
 export default {
   name: 'ProductsPage',
@@ -29,8 +28,7 @@ export default {
   },
   components: {
     Image,
-    Size,
-    Button
+    Size
   }
 }
 </script>
@@ -47,5 +45,20 @@ export default {
   position: absolute;
   top: 2%;
   right: 2%;
+}
+
+.button {
+    position: relative;
+    left: 5%;
+    bottom: 23px;
+    background-color: aquamarine;
+    padding: 3px 5px;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.button:hover {
+    cursor: pointer;
+    font-weight: bold;
 }
 </style>

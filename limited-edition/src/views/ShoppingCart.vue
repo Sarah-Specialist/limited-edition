@@ -1,23 +1,22 @@
 <template>
 <div id="page-wrap">
 <h1>Shopping cart</h1>
+<p>(limited to one item per purchase)</p>
 <div v-for="product in cartItems"
     :key="product.id"
     class="product-container"
 >
-<table>
+<table class="table">
 <tbody>
 <tr>
-<td><img :src="product.imageUrl" /></td>
-<td>{{product.color}}</td>
-<td>{{quantity}}</td>
+<td><img src="../assets/black.jpg" alt="black" class="image" /></td>
 <td>${{product.price}}</td>
 </tr>
 </tbody>
 </table>
 </div>
 <h3>Total: ${{totalPrice}}</h3>
-<button id="checkout">Proceed to checkout</button>
+<button class="button">Proceed to checkout</button>
 </div>
 </template>
 
@@ -44,4 +43,31 @@ export default {
 
 <style scoped>
 
+.product-container {
+  margin-top: 100px;
+}
+
+.table {
+  width: 40vw;
+  position: relative;
+  left: 25%;
+}
+
+.image {
+  width: 150px;
+  height: 100px;
+}
+
+.button {
+    background-color: aquamarine;
+    padding: 3px 5px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 20px 120px 0 0;
+}
+
+.button:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
 </style>
