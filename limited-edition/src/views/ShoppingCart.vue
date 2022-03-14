@@ -1,7 +1,7 @@
 <template>
 <div id="page-wrap">
 <h1>Shopping cart</h1>
-<p>(limited to one item per purchase)</p>
+<p>Invoice number: {{uuid()}}</p>
 <div v-for="product in cartItems"
     :key="product.id"
     class="product-container"
@@ -15,7 +15,7 @@
 </tr>
 </tbody>
 </table>
-</div>
+</div><br /><br />
 <h3>Total: ${{totalPrice}}</h3>
 <router-link :to="{name: 'Order'}">
 <button class="button">Proceed to checkout</button>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import { v4 as uuid } from 'uuid';
 import {cartItems} from '../fakedata';
 
 export default {
@@ -31,6 +32,7 @@ export default {
   data() {
     return {
       cartItems,
+      uuid
     }
   },
   computed: {
@@ -54,6 +56,10 @@ export default {
   width: 40vw;
   position: relative;
   left: 25%;
+}
+
+td {
+  padding: 0 50px;
 }
 
 .image {

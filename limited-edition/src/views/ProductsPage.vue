@@ -50,7 +50,7 @@ export default {
 .title {
   font-family: 'Bookman Old Style', serif;
   font-size: 50px;
-  margin-top: 2%;
+  margin-top: 1%;
 }
 
 .description {
