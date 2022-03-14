@@ -16,7 +16,9 @@
 </table>
 </div>
 <h3>Total: ${{totalPrice}}</h3>
+<router-link :to="{name: 'Order'}">
 <button class="button">Proceed to checkout</button>
+</router-link>
 </div>
 </template>
 
