@@ -1,7 +1,7 @@
 <template>
 <div class="size">
   <label>Size:</label>
-    <select class="size-input"  v-model="size">
+    <select class="size-input" :value="$store.state.size" @input="update-size">
     <option value="6.0">6.0</option>
     <option value="7.0">7.0</option>
     <option value="7.5">7.5</option>
@@ -18,7 +18,12 @@ export default {
   name: 'SizeInput',
   data: function(){
     return {
-      size: ''
+      selected: ''
+    }
+  },
+  computed: {
+    store() {
+      return this.$store.state
     }
   }
 }

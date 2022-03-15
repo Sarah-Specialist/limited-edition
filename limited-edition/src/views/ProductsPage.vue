@@ -7,7 +7,7 @@
   <h2 class="description">{{description}}</h2>
   <h2>{{price}}</h2>
   <Image />
-  <form v-on:submit="submit">
+  <form @submit.prevent="$store.dispatch('addToSize', size)">
    <Size /><button class="button">Add to cart</button>
   </form>
 </div>
@@ -29,12 +29,6 @@ export default {
   components: {
     Image,
     Size
-  },
-  methods: {
-    submit(e) {
-      e.preventDefault()
-      console.log(this.size);
-    }
   }
 }
 </script>
