@@ -7,7 +7,7 @@
   <h2 class="description">{{description}}</h2>
   <h2>{{price}}</h2>
   <Image />
-  <form @submit.prevent="$store.dispatch('addToSize', size)">
+  <form @submit.prevent="$store.dispatch('ADD_SIZES', size)">
    <Size /><button class="button">Add to cart</button>
   </form>
 </div>

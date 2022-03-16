@@ -10,7 +10,7 @@
 <tbody>
 <tr>
 <td><img src="../assets/black.jpg" alt="black" class="image" /></td>
-<td>Size: {{$store.getters.size}}</td>
+<td>Size: {{sizes()}}</td>
 <td>${{product.price}}</td>
 </tr>
 </tbody>
@@ -27,6 +27,7 @@
 import { v4 as uuid } from 'uuid';
 import {cartItems} from '../fakedata';
 
+
 export default {
   name: 'ShoppingCart',
   data() {
@@ -41,6 +42,9 @@ export default {
         (sum, item) => sum + Number(item.price),
         0
       );
+    }, 
+    sizes() {
+      return this.$store.state.sizes
     }
   }
 }

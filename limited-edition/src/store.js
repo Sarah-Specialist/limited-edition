@@ -2,23 +2,17 @@ import {createStore} from 'vuex';
 
 export default createStore({
     state: {
-        size: []
-    },
-    getters: {
-        size: function(state) {
-            return `${state.size}`
-        }
-    },
-    actions: {
-        addToSize(context, payload) {
-            const size = context.state.size
-            size.push(payload)
-            context.commit('update_size', size)
-        }
+        sizes: []
     },
     mutations: {
-        update_size(state, payload) {
-            state.size = payload
+        SET_SIZES(state, sizes) {
+            state.sizes = sizes;
+        },
+        ADD_SIZES(state, size) {
+            state.sizes.push(size);
+        },
+        UPDATE_SIZES(state, {index, value}) {
+            state.sizes[index] = value;
         }
     }
 })
