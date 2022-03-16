@@ -9,10 +9,7 @@ export default createStore({
             state.sizes = sizes;
         },
         ADD_SIZES(state, size) {
-            state.sizes.push(size);
-        },
-        UPDATE_SIZES(state, {index, value}) {
-            state.sizes[index] = value;
+            state.sizes.push(size)
         }
     }
 })

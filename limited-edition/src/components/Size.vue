@@ -1,7 +1,7 @@
 <template>
 <div class="size">
   <label>Size:</label>
-    <select class="size-input" :value="size" @change="updateSize($event, index)">
+    <select class="size-input" v-model="sizeInput" label="Size" required>
     <option value="6.0">6.0</option>
     <option value="7.0">7.0</option>
     <option value="7.5">7.5</option>
@@ -14,26 +14,12 @@
 </template>
 
 <script>
-import store from '../store';
-import _ from 'lodash';
 
 export default {
-  store,
-  created() {
-    this.$store.commit('SET_SIZES', _.cloneDeep(this.sizes));
-  },
   name: 'SizeInput',
   data: function(){
     return {
-      size: ''
-    }
-  },
-  methods: {
-    updateSize($event, index) {
-      this.$store.commit('UPDATE_SIZES',{
-        index,
-        value: $event.target.value
-      })
+      sizeInput: ""
     }
   }
 }
