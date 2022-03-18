@@ -36,7 +36,7 @@ export default {
     }
   },
   created() {
-    this.$store.commit('SET_SIZES', sizes)
+    this.$store.commit('SET_SIZES', this.sizes)
   },
   computed: {
     totalPrice() {

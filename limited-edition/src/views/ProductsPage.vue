@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     submit() {
-      this.$store.commit('ADD_SIZES', sizeInput)
+      this.$store.commit('ADD_SIZES', this.sizeInput)
     }
   }
 }
